@@ -20,9 +20,9 @@ cfg_sim.nsims      = 1000; %number of parameter combinations
 cfg_sim.nsub      = 1; %number of participants with each parameter combination
 cfg_sim.p         = 0.8; % 80 20 
 cfg_sim.nblck     = 1; % assuming 1 block 
-cfg_sim.ntrl      = 20; % assume we have 2 blocks of 60 trials each with 2 reversals within each block (for simplicity in the middle of the block).
+cfg_sim.ntrl      = 150; % assume we have 2 blocks of 60 trials each with 2 reversals within each block (for simplicity in the middle of the block).
 
-heatmap_name = 'model_recoverability_20.png';
+heatmap_name = 'model_recoverability_150.png';
 
 %% PART 1: Simulate  data from all three models 
 % 1 LR data
