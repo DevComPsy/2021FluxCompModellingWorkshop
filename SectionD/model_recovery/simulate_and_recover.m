@@ -22,13 +22,13 @@ cfg_sim.p         = 0.8; % 80 20
 cfg_sim.nblck     = 1; % assuming 1 block 
 cfg_sim.ntrl      = 20; % assume we have 2 blocks of 60 trials each with 2 reversals within each block (for simplicity in the middle of the block).
 
-heatmap_name = 'model_recoverability_20trials_90rew.png';
+heatmap_name = 'model_recoverability_20.png';
 
 %% PART 1: Simulate  data from all three models 
 % 1 LR data
 for idx = 1:cfg_sim.nsims
     fprintf('Running simulation %d\n',idx)
-    cfg_sim.tau = unifrnd(0.1, 3);
+    cfg_sim.tau = unifrnd(0.1, 1.5);
     cfg_sim.alphapos = unifrnd(0.05, 1); %sample positive learning rate from between .05 and 1
     cfg_sim.alphaneg = unifrnd(0.05, 1);  % neg isn't used in 1 LR model
     sim_out  = simulate_1LR_data(cfg_sim);
@@ -38,7 +38,7 @@ end
 % 2 LR data
 for idx = 1:cfg_sim.nsims
     fprintf('Running simulation %d\n',idx)
-    cfg_sim.tau = unifrnd(0.1, 3);
+    cfg_sim.tau = unifrnd(0.1, 1.5);
     cfg_sim.alphapos = unifrnd(0.4, 0.5); %sample positive learning rate from between .4 and .5
     cfg_sim.alphaneg = unifrnd(0.05, .1);  %sample negative learning rate from between .05 and .1
     sim_out  = simulate_2LR_data(cfg_sim);
@@ -48,7 +48,7 @@ end
 % null data
 for idx = 1:cfg_sim.nsims
     fprintf('Running simulation %d\n',idx)
-    cfg_sim.tau = unifrnd(0.1, 3);
+    cfg_sim.tau = unifrnd(0.1, 1.5);
     cfg_sim.alphapos = unifrnd(0.05, 1); %sample positive learning rate from between .05 and 1
     cfg_sim.alphaneg = unifrnd(0.05, 1);  %sample negative learning rate from between .05 and 1
     sim_out  = simulate_null_data(cfg_sim);

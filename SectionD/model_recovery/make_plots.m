@@ -38,7 +38,7 @@ subplot(1,3,1);
 b = bar(mean_AICs, 'FaceColor', [153,51,102]/255, 'EdgeColor', 'black', 'LineWidth', 1);
 set(gca, 'xticklabel',{'1 LR', '2 LR', 'Null'});
 set(gca,'FontName','Helvetica','FontSize',16);
-ylim([110 140])
+ylim([90 140])
 xlabel('Model','FontSize',18);
 ylabel('Mean AIC', 'FontSize', 18);
 
@@ -46,7 +46,7 @@ subplot(1,3,2);
 b = bar(med_AICs, 'FaceColor', [153,51,102]/255, 'EdgeColor','black', 'LineWidth', 1);
 set(gca, 'xticklabel',{'1 LR', '2 LR', 'Null'});
 set(gca,'FontName','Helvetica','FontSize',16);
-ylim([110 140])
+ylim([90 140])
 xlabel('Model','FontSize',18);
 ylabel('Median AIC', 'FontSize', 18);
 
