@@ -11,17 +11,17 @@ addpath('lik_funs');
 
 %% VARIABLES TO MODIFY %%
 %Data file name
-save_filename = ['simulated_data/fits_', date];
+save_filename = ['simulated_data/200_trials_fits_', date];
 
 % Data to load
-load('simulated_data/data_30-Aug-2021');
+load('simulated_data/200_trials_data_10-Sep-2021');
 data = sim_data;
 
 % How many iterations to run per participant
 niter = 5;
 
 % Models to fit
-models = {'1LR', '2LR', 'decay', 'null'};
+models = {'1LR', 'decay', 'null'};
 
 %determine the number of subjects
 n_subjects = length(data(1).sub_data);

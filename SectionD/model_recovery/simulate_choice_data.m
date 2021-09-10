@@ -14,18 +14,18 @@ addpath('models');
 
 %% VARIABLES TO MODIFY %%
 % Data file name
-save_filename = ['simulated_data/data_', date];
+save_filename = ['simulated_data/200_trials_data_', date];
 
 % Number of subjects to simulate
 num_subs = 1000;
 
 % Task structure
 task_struct.reward_probs = [.8 .2]; %reward probabilities
-task_struct.num_blocks = 3; %number of blocks (assumes value estimates are re-set at beginning of each block)
-task_struct.num_block_trials = 50; %number of trials per block
+task_struct.num_blocks = 1; %number of blocks (assumes value estimates are re-set at beginning of each block)
+task_struct.num_block_trials = 200; %number of trials per block
 
 %Models to simulate
-models = {'1LR', '2LR', 'decay', 'null'};
+models = {'1LR', 'decay', 'null'};
 
 % Note: Can also modify parameter distributions in code below
 
@@ -60,7 +60,7 @@ for m = 1:length(models)
     elseif strcmp(model_to_simulate, 'decay')
         tau = rand(1, num_subs);  %between 0 and 1
         alpha_init = rand(1, num_subs);  %between 0 and 1
-        eta = rand(1, num_subs); %between 0 and 1
+        eta = .5 * rand(1, num_subs) + .5; %between .5 and 1 (for simulation purposes, make decay above .5)
         params = [tau', alpha_init', eta'];
         param_names = {'beta', 'alpha_init', 'eta'};
         function_name = 'sim_decay';

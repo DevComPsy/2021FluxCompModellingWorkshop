@@ -7,7 +7,7 @@
 clear;
 
 %% LOAD DATA %%
-load('simulated_data/fits_30-Aug-2021');
+load('simulated_data/200_trials_fits_10-Sep-2021');
 
 %% CREATE CONFUSION MATRICES %%
 %-----------------------------------------------------------------%
@@ -136,9 +136,9 @@ title(leg,'Fit Model');
 
 
 %%
-%---------------------------------------------------------------------------------%
-% For Flux Workshop: Plot mean AICs, decomposed into two terms, ignore null model %
-%---------------------------------------------------------------------------------%
+%--------------------------------------------------------------%
+% For Flux Workshop: Plot mean AICs, decomposed into two terms %
+%--------------------------------------------------------------%
 
 figure;
 subplot(1,3,1)
