@@ -5,4 +5,4 @@ To prepare for the tutorial, please download the materials comprising i) the sli
 - R (https://www.r-project.org/)
 - The free version of RStudio Desktop (https://rstudio.com/products/rstudio/)
 
-Materials created by Adrian Bruhin 
+Tutorial led by Adrian Bruhin 
