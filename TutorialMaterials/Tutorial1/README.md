@@ -2,4 +2,4 @@ Tutorial 1: Inferring cognitive models of reinforcement learning from choice dat
 
 Enclosed are the codes that will be used in Tutorial 2. They are matlab/octave compatible.
 
-Workshop led by Maël Lebreton & Stefano Palminteri
+Tutorial led by Maël Lebreton & Stefano Palminteri
